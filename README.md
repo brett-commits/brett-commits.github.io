@@ -80,5 +80,5 @@ No build step. Any static host serves the folder as-is.
 
 - "THE TREAT TEAM" always appears with "SCSOLD Real Estate" in the header, and the footer carries "Brokered by SCSOLD, LLC," the office address, and an Equal Housing mark.
 - Footer carries the standard MLS/RealScout data disclaimer.
-- Contact number site-wide is the FUB number, 843-896-6166, so calls and texts land in Follow Up Boss.
-- No invented testimonials. The trust strip uses verified numbers only (300+ closings, 37 five-star Zillow reviews).
+- Contact number site-wide is the TREAT Team main line, 843-738-2394, and the email is info@treatrealty.com (set by Brett, Nov 4, 2026).
+- No invented testimonials. The trust strip uses verified numbers only (37 five-star Zillow reviews; the retired 300+ closings line was removed Nov 4, 2026).
