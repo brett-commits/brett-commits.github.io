@@ -132,3 +132,18 @@ img, iframe, video { max-width: 100%; }
   .widget-card { padding: 22px; }
   .trust .stat { min-width: 140px; }
 }
+
+/* Cinematic photo hero + search section, Nov 8, 2026 */
+.hero-photo{position:relative; background-color:#0B1622; background-size:cover; background-position:center 42%; color:#fff}
+.hero-photo:before{content:""; position:absolute; inset:0; background:linear-gradient(90deg, rgba(6,12,20,.78) 0%, rgba(6,12,20,.55) 46%, rgba(6,12,20,.18) 78%), linear-gradient(0deg, rgba(6,12,20,.45), rgba(6,12,20,0) 42%)}
+.hero-content{position:relative; padding:148px 24px 156px}
+.hero-photo h1{font-family:var(--serif); font-size:64px; line-height:1.1; font-weight:600; max-width:700px; letter-spacing:.2px}
+.hero-photo h1 em{font-style:italic; font-weight:500; color:var(--sky)}
+.hero-photo p{margin-top:22px; font-size:17.5px; font-weight:300; line-height:1.75; color:#D9DEE3; max-width:520px}
+.hero-cta{display:flex; gap:14px; margin-top:38px; flex-wrap:wrap}
+.search-sec{background:#FFFDF9; padding:96px 0 104px}
+.search-sec h2{text-align:center}
+.search-sec .lede{margin-left:auto; margin-right:auto; text-align:center}
+.search-widget{max-width:880px; margin:42px auto 0}
+.search-widget realscout-advanced-search{display:block; margin:0 auto}
+@media(max-width:900px){ .hero-content{padding:84px 24px 92px} .hero-photo h1{font-size:42px} .search-sec{padding:64px 0 72px} }
