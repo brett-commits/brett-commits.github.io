@@ -141,7 +141,7 @@ img, iframe, video { max-width: 100%; }
 .hero-photo h1 em{font-style:italic; font-weight:500; color:var(--sky)}
 .hero-photo p{margin-top:22px; font-size:17.5px; font-weight:300; line-height:1.75; color:#D9DEE3; max-width:520px}
 .hero-cta{display:flex; gap:14px; margin-top:38px; flex-wrap:wrap}
-.search-sec{background:#FFFDF9; padding:96px 0 104px}
+.search-sec{background:#FFFDF9; padding:88px 0 52px}
 .search-sec h2{text-align:center}
 .search-sec .lede{margin-left:auto; margin-right:auto; text-align:center}
 .search-widget{max-width:880px; margin:42px auto 0}
