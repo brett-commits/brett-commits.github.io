@@ -29,6 +29,14 @@
     --rs-hwv-secondary-button-color: #ffffff;
     --rs-hwv-widget-width: auto;
   }
+
+.mnav{display:none;position:relative}
+.mnav summary{list-style:none;cursor:pointer;background:#E0A81C;color:#0B1622;font-weight:800;font-size:19px;line-height:1;padding:10px 15px;border-radius:22px}
+.mnav summary::-webkit-details-marker{display:none}
+.mnav-panel{position:absolute;right:0;top:calc(100% + 10px);background:#0B1622;border:1px solid #26384A;border-radius:14px;padding:8px;min-width:224px;z-index:200;box-shadow:0 14px 34px rgba(0,0,0,.35);display:flex;flex-direction:column}
+.mnav-panel a{color:#E7EDF3 !important;text-decoration:none;font-size:15.5px;padding:11px 12px;border-bottom:1px solid #1D2D3D;font-weight:600}
+.mnav-panel a:last-child{border-bottom:none}
+@media (max-width:860px){.mnav{display:block}}
 </style>
 <!-- Meta Pixel Code -->
 <script>
@@ -84,9 +92,17 @@ window.widgetTracker("send", "pageview");
       <a href="search.html">Search Homes</a>
       <a href="home-value.html">Home Value</a>
       <a href="#areas">Areas</a>
-      <a href="#team">Our Team</a>
+      <a href="meet-the-team.html">Meet the Team</a>
+      <a href="join-the-team.html">Join the Team</a>
       <a class="call-btn" href="tel:+18437382394">843-738-2394</a>
     </nav>
+    <details class="mnav"><summary aria-label="Open menu">&#9776;</summary><div class="mnav-panel">
+<a href="search.html">Search Homes</a>
+<a href="home-value.html">Home Value</a>
+<a href="index.html#areas">Areas We Serve</a>
+<a href="meet-the-team.html">Meet the Team</a>
+<a href="join-the-team.html">Join the Team</a>
+</div></details>
   </div>
 </header>
 
@@ -231,7 +247,7 @@ window.widgetTracker("send", "pageview");
       </div>
       <div>
         <h5>Search</h5>
-        <p><a href="search.html">Search all homes</a><br><a href="home-value.html">What is my home worth?</a><br><a href="#areas">Areas we serve</a><br><a href="#team">Meet the team</a></p>
+        <p><a href="search.html">Search all homes</a><br><a href="home-value.html">What is my home worth?</a><br><a href="#areas">Areas we serve</a><br><a href="meet-the-team.html">Meet the team</a><br><a href="join-the-team.html">Join the Team</a></p>
       </div>
       <div>
         <h5>Contact</h5>

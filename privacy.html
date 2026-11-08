@@ -13,6 +13,14 @@
   .policy-wrap p,.policy-wrap li{margin-bottom:10px}
   .policy-wrap ul{margin:6px 0 10px 20px}
   .fineprint{font-size:13.5px;color:var(--muted)}
+
+.mnav{display:none;position:relative}
+.mnav summary{list-style:none;cursor:pointer;background:#E0A81C;color:#0B1622;font-weight:800;font-size:19px;line-height:1;padding:10px 15px;border-radius:22px}
+.mnav summary::-webkit-details-marker{display:none}
+.mnav-panel{position:absolute;right:0;top:calc(100% + 10px);background:#0B1622;border:1px solid #26384A;border-radius:14px;padding:8px;min-width:224px;z-index:200;box-shadow:0 14px 34px rgba(0,0,0,.35);display:flex;flex-direction:column}
+.mnav-panel a{color:#E7EDF3 !important;text-decoration:none;font-size:15.5px;padding:11px 12px;border-bottom:1px solid #1D2D3D;font-weight:600}
+.mnav-panel a:last-child{border-bottom:none}
+@media (max-width:860px){.mnav{display:block}}
 </style>
 <link rel="canonical" href="https://schomefinders.com/privacy.html">
 <meta property="og:type" content="website">
@@ -33,8 +41,15 @@
   <nav>
     <a href="index.html">Home Search</a>
     <a href="home-value.html">Home Value</a>
-    <a class="call-btn" href="tel:8437382394">843-738-2394</a>
+    <a href="meet-the-team.html">Meet the Team</a> <a href="join-the-team.html">Join the Team</a> <a class="call-btn" href="tel:8437382394">843-738-2394</a>
   </nav>
+<details class="mnav"><summary aria-label="Open menu">&#9776;</summary><div class="mnav-panel">
+<a href="search.html">Search Homes</a>
+<a href="home-value.html">Home Value</a>
+<a href="index.html#areas">Areas We Serve</a>
+<a href="meet-the-team.html">Meet the Team</a>
+<a href="join-the-team.html">Join the Team</a>
+</div></details>
 </header>
 
 <main class="policy-wrap">
