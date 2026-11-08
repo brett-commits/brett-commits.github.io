@@ -16,6 +16,7 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebPage","name":"Meet the Team | The TREAT Team","url":"https://schomefinders.com/meet-the-team.html","about":{"@id":"https://schomefinders.com/#organization"},"mainEntity":{"@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"url":"https://schomefinders.com/agent-brett-kelley.html","name":"Brett Kelley"},{"@type":"ListItem","position":2,"url":"https://schomefinders.com/agent-austin-jones.html","name":"Austin Jones"},{"@type":"ListItem","position":3,"url":"https://schomefinders.com/agent-wade-wawner.html","name":"Wade Wawner"}]}}
 </script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
   * { margin:0; padding:0; box-sizing:border-box; }
   body { font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; color:#22303E; background:#fff; line-height:1.55; }
@@ -23,12 +24,12 @@
   header.site { background:#0B1622; position:sticky; top:0; z-index:50; }
   .nav { display:flex; align-items:center; justify-content:space-between; padding:12px 20px; max-width:1180px; margin:0 auto; }
   .logo { display:flex; align-items:center; gap:10px; color:#fff; text-decoration:none; font-weight:800; letter-spacing:.4px; font-size:17px; }
-  .logo .mark { width:34px; height:34px; border-radius:50%; border:2px solid #E0A81C; object-fit:cover; background:#0e2233; }
+  .logo .mark { width:34px; height:34px; border-radius:50%; border:2px solid #B9975B; object-fit:cover; background:#0e2233; }
   .logo small { display:block; font-size:9.5px; font-weight:600; letter-spacing:1.6px; color:#9FB3C4; }
   .nav-links { display:flex; gap:20px; align-items:center; }
   .nav-links a { color:#D7E1E8; text-decoration:none; font-size:14.5px; }
-  .nav-links a:hover { color:#E0A81C; }
-  .nav-call { background:#E0A81C; color:#0B1622 !important; font-weight:700; padding:8px 14px; border-radius:20px; }
+  .nav-links a:hover { color:#B9975B; }
+  .nav-call { background:#B9975B; color:#0B1622 !important; font-weight:700; padding:8px 14px; border-radius:20px; }
   @media (max-width:760px){ .nav-links a:not(.nav-call){ display:none; } }
   section { padding:44px 0; }
   section.alt { background:#F2F5F7; }
@@ -39,27 +40,34 @@
   .team { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:22px; margin-top:26px; }
   .member { background:#fff; border:1px solid #d8dee5; border-radius:14px; padding:24px 18px; text-align:center; }
   section.alt .member { background:#fff; }
-  .member img { width:168px; height:168px; object-fit:cover; object-position:top; border-radius:50%; border:3px solid #E0A81C; margin-bottom:14px; }
+  .member img { width:168px; height:168px; object-fit:cover; object-position:top; border-radius:50%; border:3px solid #B9975B; margin-bottom:14px; }
   .member h3 { color:#0B1622; font-size:20px; margin-bottom:2px; }
   .member .role { color:#1B9AAA; font-weight:700; font-size:12.5px; letter-spacing:1.4px; text-transform:uppercase; margin-bottom:10px; }
   .member p { font-size:15px; color:#47617A; }
-  .member a.profile { display:inline-block; margin-top:6px; color:#0B1622; font-weight:700; text-decoration:none; border-bottom:2px solid #E0A81C; }
-  .cta-btn { display:inline-block; background:#E0A81C; color:#0B1622; font-weight:700; padding:13px 26px; border-radius:26px; text-decoration:none; font-size:16px; }
+  .member a.profile { display:inline-block; margin-top:6px; color:#0B1622; font-weight:700; text-decoration:none; border-bottom:2px solid #B9975B; }
+  .cta-btn { display:inline-block; background:#B9975B; color:#0B1622; font-weight:700; padding:13px 26px; border-radius:26px; text-decoration:none; font-size:16px; }
   footer { background:#0B1622; color:#C7D3DD; padding:38px 0 26px; font-size:14px; }
   footer h5 { color:#fff; font-size:13px; letter-spacing:1.6px; margin-bottom:10px; }
   footer a { color:#C7D3DD; text-decoration:none; }
-  footer a:hover { color:#E0A81C; }
+  footer a:hover { color:#B9975B; }
   .foot-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:26px; }
   .eq { display:flex; align-items:center; gap:8px; margin-top:14px; font-size:11px; letter-spacing:1px; color:#9FB3C4; }
   .fineprint { border-top:1px solid #22303E; margin-top:26px; padding-top:14px; font-size:12px; color:#7E93A5; }
 
 .mnav{display:none;position:relative}
-.mnav summary{list-style:none;cursor:pointer;background:#E0A81C;color:#0B1622;font-weight:800;font-size:19px;line-height:1;padding:10px 15px;border-radius:22px}
+.mnav summary{list-style:none;cursor:pointer;background:#B9975B;color:#0B1622;font-weight:800;font-size:19px;line-height:1;padding:10px 15px;border-radius:22px}
 .mnav summary::-webkit-details-marker{display:none}
 .mnav-panel{position:absolute;right:0;top:calc(100% + 10px);background:#0B1622;border:1px solid #26384A;border-radius:14px;padding:8px;min-width:224px;z-index:200;box-shadow:0 14px 34px rgba(0,0,0,.35);display:flex;flex-direction:column}
 .mnav-panel a{color:#E7EDF3 !important;text-decoration:none;font-size:15.5px;padding:11px 12px;border-bottom:1px solid #1D2D3D;font-weight:600}
 .mnav-panel a:last-child{border-bottom:none}
 @media (max-width:860px){.mnav{display:block}}
+
+  /* Luxury pass, Nov 8, 2026 */
+  body { font-family:'Montserrat',Arial,sans-serif; background:#FFFDF9; }
+  h1, h2, .member h3 { font-family:'Cormorant Garamond',Georgia,serif; font-weight:600; letter-spacing:.2px; }
+  h1 { font-size:41px; line-height:1.15; }
+  h2 { font-size:31px; line-height:1.2; }
+  .member h3 { font-size:23px; }
 </style>
 </head>
 <body>
