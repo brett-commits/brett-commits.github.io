@@ -42,15 +42,15 @@
   * { margin:0; padding:0; box-sizing:border-box; }
   body { font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; color:#22303E; background:#fff; line-height:1.55; }
   .wrap { max-width:1060px; margin:0 auto; padding:0 20px; }
-  header.site { background:#0B1622; position:sticky; top:0; z-index:50; }
+  header.site { background:#FFFDF9; border-bottom:1px solid #E6DECF; position:sticky; top:0; z-index:50; }
   .nav { display:flex; align-items:center; justify-content:space-between; padding:12px 20px; max-width:1180px; margin:0 auto; }
-  .logo { display:flex; align-items:center; gap:10px; color:#fff; text-decoration:none; font-weight:800; letter-spacing:.4px; font-size:17px; }
-  .logo .mark { width:34px; height:34px; border-radius:50%; border:2px solid #B9975B; object-fit:cover; background:#0e2233; }
-  .logo small { display:block; font-size:9.5px; font-weight:600; letter-spacing:1.6px; color:#9FB3C4; }
+  .logo { display:flex; align-items:center; gap:12px; color:#0B1622; text-decoration:none; font-family:'Cormorant Garamond',Georgia,serif; font-weight:600; letter-spacing:2.5px; font-size:25px; }
+  .logo .mark { width:34px; height:34px; border-radius:50%; border:2px solid #B9975B; object-fit:cover; background:#FFFDF9; }
+  .logo small { display:block; font-family:'Montserrat',sans-serif; font-size:9.5px; font-weight:600; letter-spacing:1.6px; color:#A98850; }
   .nav-links { display:flex; gap:16px; align-items:center; flex-wrap:nowrap; } .nav-links a { white-space:nowrap; }
-  .nav-links a { color:#D7E1E8; text-decoration:none; font-size:14.5px; }
+  .nav-links a { color:#0B1622; text-decoration:none; font-size:14.5px; }
   .nav-links a:hover { color:#B9975B; }
-  .nav-call { background:#B9975B; color:#0B1622 !important; font-weight:700; padding:10px 16px; border-radius:2px; white-space:nowrap; letter-spacing:.6px; }
+  .nav-call { background:#0B1622; color:#fff !important; font-weight:700; padding:10px 16px; border-radius:2px; white-space:nowrap; letter-spacing:.6px; }
   @media (max-width:760px){ .nav-links a:not(.nav-call){ display:none; } }
   section { padding:44px 0; }
   section.alt { background:#F2F5F7; }
@@ -77,10 +77,10 @@
   .fineprint { border-top:1px solid #22303E; margin-top:26px; padding-top:14px; font-size:12px; color:#7E93A5; }
 
 .mnav{display:none;position:relative}
-.mnav summary{list-style:none;cursor:pointer;background:#B9975B;color:#0B1622;font-weight:800;font-size:19px;line-height:1;padding:10px 15px;border-radius:22px}
+.mnav summary{list-style:none;cursor:pointer;background:#0B1622;color:#fff;font-weight:800;font-size:19px;line-height:1;padding:10px 15px;border-radius:2px}
 .mnav summary::-webkit-details-marker{display:none}
-.mnav-panel{position:absolute;right:0;top:calc(100% + 10px);background:#0B1622;border:1px solid #26384A;border-radius:14px;padding:8px;min-width:224px;z-index:200;box-shadow:0 14px 34px rgba(0,0,0,.35);display:flex;flex-direction:column}
-.mnav-panel a{color:#E7EDF3 !important;text-decoration:none;font-size:15.5px;padding:11px 12px;border-bottom:1px solid #1D2D3D;font-weight:600}
+.mnav-panel{position:absolute;right:0;top:calc(100% + 10px);background:#FFFDF9;border:1px solid #E6DECF;border-radius:3px;padding:8px;min-width:224px;z-index:200;box-shadow:0 14px 34px rgba(0,0,0,.35);display:flex;flex-direction:column}
+.mnav-panel a{color:#0B1622 !important;text-decoration:none;font-size:15.5px;padding:11px 12px;border-bottom:1px solid #E6DECF;font-weight:600}
 .mnav-panel a:last-child{border-bottom:none}
 @media (max-width:860px){.mnav{display:block}}
 
@@ -96,7 +96,7 @@
 
 <header class="site">
   <div class="nav">
-    <a class="logo" href="index.html"><img class="mark" src="assets/treat-logo.png" alt="The TREAT Team logo"><span>SC HOME FINDERS<small>THE TREAT TEAM · SCSOLD REAL ESTATE</small></span></a>
+    <a class="logo" href="index.html"><img class="mark" src="assets/treat-logo.png" alt="The TREAT Team logo"><span>THE <span style="color:#B9975B">TREAT</span> TEAM<small>SCSOLD REAL ESTATE</small></span></a>
     <nav class="nav-links">
       <a href="search.html">Search Homes</a>
       <a href="home-value.html">Home Value</a> <a href="how-to-buy-a-home-charleston-sc.html">How to Buy</a> <a href="how-to-sell-a-home-charleston-sc.html">How to Sell</a> <a href="meet-the-team.html">Meet the Team</a>
