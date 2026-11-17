@@ -7,7 +7,7 @@
 <meta name="description" content="Search condos for sale in Charleston, SC with live MLS data. Compare buildings, fees, and locations with help from The TREAT Team.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=luxe2">
+<link rel="stylesheet" href="styles.css?v=luxe4">
 <link rel="icon" type="image/png" href="assets/treat-logo.png">
 <script src="https://em.realscout.com/widgets/realscout-web-components.umd.js" type="module"></script>
 <style>
@@ -107,6 +107,32 @@ window.widgetTracker("send", "pageview");
         <realscout-advanced-search agent-encoded-id="QWdlbnQtMjcyNDIy"></realscout-advanced-search>
       </div>
     </div>
+    <div class="widget-card hv-compact">
+      <h3>Get new Charleston condos by email</h3>
+      <p>New matches come to you as they list. A local team member checks them against what you actually want.</p>
+      <div class="hv-capture">
+        <form class="hv-form" method="post">
+          <div class="hv-row">
+            <div><label for="sp-first">First name</label><input type="text" id="sp-first" name="first_name" autocomplete="given-name" required></div>
+            <div><label for="sp-last">Last name</label><input type="text" id="sp-last" name="last_name" autocomplete="family-name" required></div>
+          </div>
+          <div class="hv-row">
+            <div><label for="sp-phone">Mobile phone</label><input type="tel" id="sp-phone" name="phone" autocomplete="tel" inputmode="tel" pattern="[0-9()+\-\s]{10,}" required></div>
+            <div><label for="sp-email">Email</label><input type="email" id="sp-email" name="email" autocomplete="email" required></div>
+          </div>
+          <label class="hv-consent"><input type="checkbox" name="consent" value="yes" required><span>By checking this box and submitting, I agree The TREAT Team, brokered by SCSOLD, LLC, may contact me by call, text, and email at the number and address I provided about my home and my plans. Message frequency varies. Message and data rates may apply. Reply STOP to end texts. Consent is not a condition of any purchase or of working with The TREAT Team.</span></label>
+          <input type="hidden" name="source" value="schomefinders.com">
+          <input type="hidden" name="source_url" value="https://schomefinders.com/condos-for-sale-charleston-sc.html">
+          <input type="hidden" name="tags" value="Buyer,schomefinders-search">
+          <button type="submit" class="btn hv-submit">Send me new matches</button>
+          <p class="hv-note">Your information stays with The TREAT Team. See our <a href="privacy.html">Privacy Policy</a>.</p>
+        </form>
+        <div class="hv-step2" hidden>
+          <h4>You are in.</h4>
+          <p>New Charleston condos will come to you as they list. Keep browsing below, and save anything you like.</p>
+        </div>
+      </div>
+    </div>
     <h2 style="font-size:24px; margin-top:56px">Related searches</h2>
     <div class="areas" style="margin-top:18px">
       <div class="area"><h4><a href="homes-for-sale-charleston-sc.html">Homes for Sale in Charleston</a></h4><p>Every home currently for sale across Charleston, from downtown and James Island to West As...</p></div>
@@ -142,6 +168,8 @@ window.widgetTracker("send", "pageview");
     </div>
   </div>
 </footer>
+
+<script src="hv-capture.js"></script>
 
 </body>
 </html>

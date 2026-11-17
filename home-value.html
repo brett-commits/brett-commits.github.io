@@ -1,3 +1,17 @@
+<!-- ============================================================
+  HOME VALUE LEAD CAPTURE v2, built Nov 17, 2026 from the Nov 10
+  staged file. STAGED ONLY, not live. Do not deploy without
+  Brett's approval and a live Zapier Catch Hook URL in
+  hv-capture.js (currently a placeholder).
+  Change vs the live home-value.html (backed up as
+  home-value.html.live-backup-2026-11-17): the email-only
+  RealScout widget in both cards is replaced by a TREAT Team form
+  (step 1: name, mobile phone, email, property address) that
+  posts into Follow Up Boss through a Zapier Catch Hook, then
+  reveals the RealScout widget on the same page (step 2) so the
+  visitor still gets the instant estimate and Home Value Alerts.
+  Form styling lives in styles.css, submit logic in hv-capture.js.
+  ============================================================ -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +21,7 @@
 <meta name="description" content="Find out what a buyer would pay for your Charleston home today. A quick estimate, then a real read from a local team on today's buyers and today's competition, from The TREAT Team, brokered by SCSOLD, LLC.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=luxe2">
+<link rel="stylesheet" href="styles.css?v=luxe4">
 <link rel="icon" type="image/png" href="assets/treat-logo.png">
 <!-- RealScout widgets: script tag required only once per page -->
 <script src="https://em.realscout.com/widgets/realscout-web-components.umd.js" type="module"></script>
@@ -103,8 +117,36 @@ window.widgetTracker("send", "pageview");
     </div>
     <div class="widget-card">
       <h3>Get your home valuation</h3>
-      <p>Enter your address. Takes about 30 seconds.</p>
-      <realscout-home-value agent-encoded-id="QWdlbnQtMjcyNDIy"></realscout-home-value>
+      <p>Two short steps. First your details, then your estimate on the spot.</p>
+      <div class="hv-capture" data-on-captured="skip">
+        <form class="hv-form" method="post">
+          <div class="hv-row">
+            <div><label for="hv1-first">First name</label><input type="text" id="hv1-first" name="first_name" autocomplete="given-name" required></div>
+            <div><label for="hv1-last">Last name</label><input type="text" id="hv1-last" name="last_name" autocomplete="family-name" required></div>
+          </div>
+          <div class="hv-row">
+            <div><label for="hv1-phone">Mobile phone</label><input type="tel" id="hv1-phone" name="phone" autocomplete="tel" inputmode="tel" pattern="[0-9()+\-\s]{10,}" required></div>
+            <div><label for="hv1-email">Email</label><input type="email" id="hv1-email" name="email" autocomplete="email" required></div>
+          </div>
+          <div><label for="hv1-street">Property street address</label><input type="text" id="hv1-street" name="street" autocomplete="street-address" required></div>
+          <div class="hv-row-addr">
+            <div><label for="hv1-city">City</label><input type="text" id="hv1-city" name="city" autocomplete="address-level2" required></div>
+            <div><label for="hv1-state">State</label><input type="text" id="hv1-state" name="state" autocomplete="address-level1" value="SC" required></div>
+            <div><label for="hv1-zip">ZIP</label><input type="text" id="hv1-zip" name="zip" autocomplete="postal-code" inputmode="numeric" required></div>
+          </div>
+          <label class="hv-consent"><input type="checkbox" name="consent" value="yes" required><span>By checking this box and submitting, I agree The TREAT Team, brokered by SCSOLD, LLC, may contact me by call, text, and email at the number and address I provided about my home and my plans. Message frequency varies. Message and data rates may apply. Reply STOP to end texts. Consent is not a condition of any purchase or of working with The TREAT Team.</span></label>
+          <input type="hidden" name="source" value="schomefinders.com">
+          <input type="hidden" name="source_url" value="https://schomefinders.com/home-value.html">
+          <input type="hidden" name="tags" value="Seller,schomefinders-home-value">
+          <button type="submit" class="btn hv-submit">Continue to my valuation</button>
+          <p class="hv-note">Your information stays with The TREAT Team. See our <a href="privacy.html">Privacy Policy</a>.</p>
+        </form>
+        <div class="hv-step2" hidden>
+          <h4>Your details are in. Now see your number.</h4>
+          <p>Enter your address in the valuation tool below and your estimate appears on the spot. Use the same email address so your monthly home value updates reach you. A TREAT Team member also reviews the number against the buyers shopping today and sends you a real read on what a buyer would pay.</p>
+          <div class="hv-widget-slot"></div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -113,8 +155,8 @@ window.widgetTracker("send", "pageview");
   <div class="wrap">
     <h2>How it works</h2>
     <div class="steps">
-      <div class="step"><div class="n">1</div><h4>Enter your address</h4><p>The widget gives you a quick starting estimate on the spot. Treat it as a starting point, not the answer.</p></div>
-      <div class="step"><div class="n">2</div><h4>We review it personally</h4><p>A TREAT Team member checks it against today's market: the buyers shopping now, the homes you would compete with now, and what has changed since the homes near you sold.</p></div>
+      <div class="step"><div class="n">1</div><h4>Tell us about the home</h4><p>Your name, your mobile number, and the address. About 30 seconds, and your home is on file with a local team, not just a website.</p></div>
+      <div class="step"><div class="n">2</div><h4>See your estimate on the spot</h4><p>The valuation tool gives you a quick starting number right away, then monthly updates as the market moves. Treat that first number as a starting point, not the answer.</p></div>
       <div class="step"><div class="n">3</div><h4>Plan the move, not just the number</h4><p>Most people who run their value are selling within the next year or so. Use that runway: we show you what buyers are paying now, what would move your number before you list, and how the timing fits the move you want to make.</p></div>
     </div>
   </div>
@@ -134,7 +176,35 @@ window.widgetTracker("send", "pageview");
     <div class="widget-card">
       <h3>Start with the number</h3>
       <p>Your valuation comes first. The conversation only happens if you want it.</p>
-      <realscout-home-value agent-encoded-id="QWdlbnQtMjcyNDIy"></realscout-home-value>
+      <div class="hv-capture" data-on-captured="skip">
+        <form class="hv-form" method="post">
+          <div class="hv-row">
+            <div><label for="hv2-first">First name</label><input type="text" id="hv2-first" name="first_name" autocomplete="given-name" required></div>
+            <div><label for="hv2-last">Last name</label><input type="text" id="hv2-last" name="last_name" autocomplete="family-name" required></div>
+          </div>
+          <div class="hv-row">
+            <div><label for="hv2-phone">Mobile phone</label><input type="tel" id="hv2-phone" name="phone" autocomplete="tel" inputmode="tel" pattern="[0-9()+\-\s]{10,}" required></div>
+            <div><label for="hv2-email">Email</label><input type="email" id="hv2-email" name="email" autocomplete="email" required></div>
+          </div>
+          <div><label for="hv2-street">Property street address</label><input type="text" id="hv2-street" name="street" autocomplete="street-address" required></div>
+          <div class="hv-row-addr">
+            <div><label for="hv2-city">City</label><input type="text" id="hv2-city" name="city" autocomplete="address-level2" required></div>
+            <div><label for="hv2-state">State</label><input type="text" id="hv2-state" name="state" autocomplete="address-level1" value="SC" required></div>
+            <div><label for="hv2-zip">ZIP</label><input type="text" id="hv2-zip" name="zip" autocomplete="postal-code" inputmode="numeric" required></div>
+          </div>
+          <label class="hv-consent"><input type="checkbox" name="consent" value="yes" required><span>By checking this box and submitting, I agree The TREAT Team, brokered by SCSOLD, LLC, may contact me by call, text, and email at the number and address I provided about my home and my plans. Message frequency varies. Message and data rates may apply. Reply STOP to end texts. Consent is not a condition of any purchase or of working with The TREAT Team.</span></label>
+          <input type="hidden" name="source" value="schomefinders.com">
+          <input type="hidden" name="source_url" value="https://schomefinders.com/home-value.html">
+          <input type="hidden" name="tags" value="Seller,schomefinders-home-value">
+          <button type="submit" class="btn hv-submit">Continue to my valuation</button>
+          <p class="hv-note">Your information stays with The TREAT Team. See our <a href="privacy.html">Privacy Policy</a>.</p>
+        </form>
+        <div class="hv-step2" hidden>
+          <h4>Your details are in. Now see your number.</h4>
+          <p>Enter your address in the valuation tool below and your estimate appears on the spot. Use the same email address so your monthly home value updates reach you. A TREAT Team member also reviews the number against the buyers shopping today and sends you a real read on what a buyer would pay.</p>
+          <div class="hv-widget-slot"></div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -152,7 +222,7 @@ window.widgetTracker("send", "pageview");
       </div>
       <div>
         <h5>Search</h5>
-        <p><a href="search.html">Search all homes</a><br><a href="home-value.html">What is my home worth?</a><br><a href="how-to-buy-a-home-charleston-sc.html">How to buy a home</a><br><a href="how-to-sell-a-home-charleston-sc.html">How to sell a home</a><br><a href="index.html#areas">Areas we serve</a><br><a href="meet-the-team.html">Meet the team</a><br><a href="join-the-team.html">Join the Team</a></p>
+        <p><a href="search.html">Search all homes</a><br><a href="home-value.html">What is my home worth?</a><br><a href="how-to-buy-a-home-charleston-sc.html">How to buy a home</a><br><a href="how-to-sell-a-home-charleston-sc.html">How to sell a home</a><br><a href="meet-the-team.html">Meet the team</a><br><a href="join-the-team.html">Join the Team</a></p>
       </div>
       <div>
         <h5>Contact</h5>
@@ -164,6 +234,13 @@ window.widgetTracker("send", "pageview");
     </div>
   </div>
 </footer>
+
+<!-- Step 2 valuation widget, inserted only after the form submits so it loads in view -->
+<template id="hv-widget-template">
+  <realscout-home-value agent-encoded-id="QWdlbnQtMjcyNDIy"></realscout-home-value>
+</template>
+
+<script src="hv-capture.js"></script>
 
 </body>
 </html>

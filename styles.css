@@ -147,3 +147,32 @@ img, iframe, video { max-width: 100%; }
 .search-widget{max-width:880px; margin:42px auto 0}
 .search-widget realscout-advanced-search{display:block; margin:0 auto}
 @media(max-width:900px){ .hero-content{padding:84px 24px 92px} .hero-photo h1{font-size:42px} .search-sec{padding:64px 0 72px} }
+
+/* Owned lead capture forms (hv-capture.js), Nov 17, 2026.
+   Moved here from the Nov 10 home-value staged file so every page
+   shares one stylesheet. The RealScout widget itself is deferred:
+   it is inserted only after a form submits, so it never blocks
+   the first paint or sits as a blank card above the fold. */
+.hv-form{display:flex;flex-direction:column;gap:13px;text-align:left}
+.hv-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.hv-row-addr{display:grid;grid-template-columns:2fr 1fr 1fr;gap:12px}
+.hv-form label{font-size:11.5px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:var(--navy);display:block;margin-bottom:5px}
+.hv-form input[type=text],.hv-form input[type=email],.hv-form input[type=tel],.hv-form select{width:100%;padding:12px 13px;border:1px solid var(--line);border-radius:2px;font-family:'Montserrat',Arial,sans-serif;font-size:15px;color:var(--ink);background:#fff}
+.hv-form select{appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%230B1622' stroke-width='2'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 13px center;padding-right:36px}
+.hv-form input:focus,.hv-form select:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(185,151,91,.16)}
+.hv-consent{display:flex;gap:10px;align-items:flex-start;font-size:12.5px;line-height:1.6;color:var(--muted);text-transform:none;letter-spacing:0;font-weight:400}
+.hv-consent input{margin-top:3px;width:16px;height:16px;flex:none;accent-color:#0B1622}
+.hv-form button.btn{border:0;cursor:pointer;font-family:inherit;width:100%;text-align:center}
+.hv-form button.btn:disabled{opacity:.6;cursor:default}
+.hv-note{font-size:12.5px !important;color:var(--muted);margin-bottom:0 !important}
+.hv-step2 h4{font-family:var(--serif);color:var(--navy);font-size:22px;font-weight:600;margin-bottom:8px}
+.hv-step2 p{color:var(--muted);font-size:14px;margin-bottom:16px}
+.hv-step2 .btn{display:inline-block;margin-top:4px}
+.hv-area-link{display:inline-block;margin-top:6px;font-size:14px;font-weight:700;color:#A98850}
+@media(max-width:560px){.hv-row,.hv-row-addr{grid-template-columns:1fr}}
+/* Compact capture card used on search pages: same fields, tighter fit. */
+.hv-compact{margin-top:26px}
+.hv-compact .hv-form{gap:10px}
+.hv-compact h3{font-family:var(--serif);color:var(--navy);font-size:22px;font-weight:600;margin-bottom:6px}
+/* Capture band on the homepage areas section. */
+.hv-band{max-width:720px;margin:44px auto 0}
